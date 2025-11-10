@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
     # 4. Creating retriever and Chat Model
     retriever = vectorstore.as_retriever(
-        search_type="similarity", search_kwargs={"k": 3})
+        search_type="mmr", search_kwargs={"k": 3})
 
     llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.3)
 
